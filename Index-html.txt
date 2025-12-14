@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nadhim Schoonmaker | Professional Cleaning Services in Belgium</title>
+  <meta name="description" content="Nadhim Schoonmaker (VAT: BE0750.489.196) provides reliable, flexible, and compliant cleaning services for offices, commercial buildings, and residential facilities in Belgium." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="Nadhim Schoonmaker | Cleaning Services in Belgium" />
+  <meta property="og:description" content="Offices • Commercial Buildings • Residential Facilities — Reliable & Hygienic Cleaning (Belgian standards)." />
+  <meta property="og:type" content="website" />
+  <meta name="theme-color" content="#0b5cff" />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a32;
+      --muted:#a9b3c9;
+      --text:#eef2ff;
+      --brand:#0b5cff;
+      --brand2:#22c55e;
+      --line:rgba(255,255,255,.10);
+      --shadow: 0 18px 60px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:
+      radial-gradient(1200px 600px at 10% -10%, rgba(11,92,255,.35), transparent 60%),
+      radial-gradient(900px 500px at 100% 10%, rgba(34,197,94,.20), transparent 55%),
+      linear-gradient(180deg, #070b14, var(--bg) 45%, #070b14);
+      color:var(--text);
+    }
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:var(--max);margin:0 auto;padding:24px}
+    header{
+      position:sticky;top:0;z-index:20;
+      backdrop-filter: blur(10px);
+      background: rgba(7,11,20,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:14px 24px;max-width:var(--max);margin:0 auto}
+    .logo{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:.2px}
+    .mark{
+      width:38px;height:38px;border-radius:12px;
+      background: linear-gradient(135deg, var(--brand), rgba(34,197,94,.85));
+      box-shadow: 0 10px 30px rgba(11,92,255,.25);
+      display:grid;place-items:center;font-weight:900;
+    }
+    .navlinks{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+    .navlinks a{padding:10px 12px;border-radius:12px;color:var(--muted)}
+    .navlinks a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;
+      gap:10px;padding:12px 14px;border-radius:14px;border:1px solid var(--line);
+      background: rgba(255,255,255,.05); color:var(--text);
+      cursor:pointer; transition:.2s transform,.2s background;
+      white-space:nowrap;
+    }
+    .btn:hover{background:rgba(255,255,255,.09);transform:translateY(-1px)}
+    .btn.primary{background:linear-gradient(135deg,var(--brand),#2b7bff);border-color:transparent}
+    .btn.primary:hover{background:linear-gradient(135deg,#2b7bff,var(--brand))}
+    .btn.green{background:linear-gradient(135deg,var(--brand2),#16a34a);border-color:transparent}
+    .btn.green:hover{filter:brightness(1.03)}
+    .hero{padding:46px 0 10px}
+    .grid{display:grid;gap:18px}
+    @media (min-width: 960px){
+      .grid.heroGrid{grid-template-columns: 1.25fr .75fr;align-items:stretch}
+    }
+    .card{
+      background: rgba(15,26,50,.72);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .pad{padding:22px}
+    h1{margin:0 0 10px;font-size: clamp(28px, 4vw, 44px);line-height:1.1}
+    p{margin:0 0 12px;color:var(--muted);line-height:1.6}
+    .tagrow{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0 18px}
+    .tag{
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.04);
+      padding:8px 10px;border-radius:999px;
+      color:var(--muted);font-size:13px;
+    }
+    .kpis{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:18px}
+    .kpi{padding:14px;border-radius:16px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+    .kpi b{display:block;font-size:18px;margin-bottom:2px}
+    .kpi span{color:var(--muted);font-size:13px}
+    section{padding:18px 0}
+    .sectionTitle{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 0 12px}
+    .sectionTitle h2{margin:0;font-size:22px}
+    .sectionTitle .note{color:var(--muted);font-size:13px}
+    .cols{display:grid;gap:18px}
+    @media (min-width: 960px){ .cols{grid-template-columns:repeat(3,minmax(0,1fr))} }
+    .service{
+      padding:18px;border-radius:18px;border:1px solid var(--line);background:rgba(255,255,255,.03);
+      height:100%;
+    }
+    .service h3{margin:0 0 8px}
+    .service ul{margin:10px 0 0 18px;color:var(--muted);line-height:1.6}
+    .split{display:grid;gap:18px}
+    @media (min-width: 960px){ .split{grid-template-columns: 1fr 1fr} }
+    form{display:grid;gap:12px}
+    label{font-size:13px;color:var(--muted)}
+    input,textarea,select{
+      width:100%;padding:12px 12px;border-radius:14px;border:1px solid var(--line);
+      background: rgba(7,11,20,.35);color:var(--text);outline:none;
+    }
+    input:focus,textarea:focus,select:focus{border-color:rgba(11,92,255,.6)}
+    textarea{min-height:120px;resize:vertical}
+    .small{font-size:12px;color:var(--muted)}
+    footer{padding:26px 0 40px;border-top:1px solid var(--line);margin-top:20px}
+    .foot{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between}
+    .pill{
+      padding:10px 12px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.03);
+      color:var(--muted);font-size:13px
+    }
+    .alert{
+      display:none;padding:12px 14px;border-radius:14px;border:1px solid rgba(34,197,94,.35);
+      background: rgba(34,197,94,.10);color:#d7ffe7;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <div class="logo">
+        <div class="mark">N</div>
+        <div>
+          <div style="font-size:14px;color:var(--muted);line-height:1.2">Registered Cleaning Company</div>
+          <div style="font-size:16px;line-height:1.2">Nadhim Schoonmaker</div>
+        </div>
+      </div>
+
+      <nav class="navlinks" aria-label="Primary">
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#compliance">Safety & Hygiene</a>
+        <a href="#contact">Contact</a>
+        <a class="btn primary" href="#quote">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="grid heroGrid">
+        <div class="card">
+          <div class="pad">
+            <h1>Professional Cleaning Services in Belgium</h1>
+            <p>
+              We provide reliable, flexible cleaning for <b>offices</b>, <b>commercial buildings</b>,
+              and <b>residential facilities</b>. We work with strict adherence to Belgian safety and hygiene standards.
+            </p>
+
+            <div class="tagrow">
+              <span class="tag">Reliable team</span>
+              <span class="tag">Flexible schedules</span>
+              <span class="tag">Safety & hygiene</span>
+              <span class="tag">Long-term contracts</span>
+            </div>
+
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <a class="btn green" href="tel:+32485761331">Call: +32 485 76 13 31</a>
+              <a class="btn" href="mailto:nadhimhameed5@gmail.com?subject=Cleaning%20Services%20Request%20-%20Nadhim%20Schoonmaker">
+                Email: nadhimhameed5@gmail.com
+              </a>
+              <a class="btn primary" href="#quote">Request a quotation</a>
+            </div>
+
+            <div class="kpis">
+              <div class="kpi">
+                <b>VAT</b>
+                <span>BE0750.489.196</span>
+              </div>
+              <div class="kpi">
+                <b>Available for</b>
+                <span>One-time & long-term contracts</span>
+              </div>
+              <div class="kpi">
+                <b>Service types</b>
+                <span>Office • Commercial • Residential</span>
+              </div>
+              <div class="kpi">
+                <b>Focus</b>
+                <span>Quality • Consistency • Compliance</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="pad">
+            <h2 style="margin:0 0 10px">Quick Request</h2>
+            <p class="small">Tell us what you need and we will respond quickly.</p>
+
+            <div id="success" class="alert">✅ Your message is ready. Click “Send Email” below.</div>
+
+            <form id="quickForm">
+              <div>
+                <label for="q_name">Name / Company</label>
+                <input id="q_name" name="name" placeholder="Your name or company" required />
+              </div>
+              <div>
+                <label for="q_email">Email</label>
+                <input id="q_email" name="email" type="email" placeholder="name@company.com" required />
+              </div>
+              <div>
+                <label for="q_type">Service type</label>
+                <select id="q_type" name="type" required>
+                  <option value="">Select…</option>
+                  <option>Office cleaning</option>
+                  <option>Commercial building cleaning</option>
+                  <option>Residential facilities cleaning</option>
+                  <option>Other</option>
+                </select>
+              </div>
+              <div>
+                <label for="q_msg">Short message</label>
+                <textarea id="q_msg" name="message" placeholder="Cleaning frequency, size, location, preferred time…" required></textarea>
+              </div>
+
+              <button class="btn primary" type="submit">Prepare Email</button>
+              <a id="sendMail" class="btn" href="#" style="display:none">Send Email</a>
+
+              <div class="small">
+                Prefer phone? Call <b>+32 485 76 13 31</b>.
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="sectionTitle">
+        <h2>Services</h2>
+        <div class="note">Tailored plans • Daily/weekly/monthly schedules</div>
+      </div>
+
+      <div class="cols">
+        <div class="service">
+          <h3>Office Cleaning</h3>
+          <p>Professional cleaning for workspaces, meeting rooms, kitchens, and sanitary areas.</p>
+          <ul>
+            <li>Desks & common areas</li>
+            <li>Sanitary cleaning & refills</li>
+            <li>Floor & surface care</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h3>Commercial Buildings</h3>
+          <p>Cleaning for shops, entrances, corridors, elevators, and shared facilities.</p>
+          <ul>
+            <li>High-traffic areas</li>
+            <li>Glass & windows (basic)</li>
+            <li>Waste management</li>
+          </ul>
+        </div>
+
+        <div class="service">
+          <h3>Residential Facilities</h3>
+          <p>Reliable cleaning for apartment buildings and communal spaces.</p>
+          <ul>
+            <li>Stairs & hallways</li>
+            <li>Basement & shared zones</li>
+            <li>Flexible timing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="sectionTitle">
+        <h2>About Nadhim Schoonmaker</h2>
+        <div class="note">Registered in Belgium • VAT: BE0750.489.196</div>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <div class="pad">
+            <p>
+              <b>Nadhim Schoonmaker</b> is a registered cleaning company in Belgium.
+              We focus on long-term partnerships and consistent quality.
+            </p>
+            <p>
+              Our team is known for <b>reliability</b>, <b>flexibility</b>, and strong attention to hygiene.
+              We can tailor cleaning schedules to your business hours and operational needs.
+            </p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
+              <span class="pill">Reliable planning</span>
+              <span class="pill">Flexible shifts</span>
+              <span class="pill">Quality checks</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="pad">
+            <h3 style="margin:0 0 10px">Why choose us?</h3>
+            <ul style="margin:0 0 0 18px;color:var(--muted);line-height:1.8">
+              <li>Clear communication and fast response</li>
+              <li>Customized contract options (short/long term)</li>
+              <li>Strict hygiene routines for professional environments</li>
+              <li>Respect for safety procedures and site rules</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMPLIANCE -->
+    <section id="compliance">
+      <div class="sectionTitle">
+        <h2>Safety & Hygiene Standards</h2>
+        <div class="note">Strict adherence to Belgian safety & hygiene practices</div>
+      </div>
+
+      <div class="card">
+        <div class="pad">
+          <p>
+            We follow safe working methods, use appropriate cleaning products per surface type,
+            and can align with your facility’s internal procedures (access, badges, keys, checklists).
+          </p>
+          <div class="cols" style="margin-top:12px">
+            <div class="service">
+              <h3>Hygiene</h3>
+              <p class="small">Structured routines, sanitation focus, and clean-to-standard delivery.</p>
+            </div>
+            <div class="service">
+              <h3>Safety</h3>
+              <p class="small">Safe handling, correct signage, and careful use of products.</p>
+            </div>
+            <div class="service">
+              <h3>Flexibility</h3>
+              <p class="small">After-hours options and minimal disruption to operations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="sectionTitle">
+        <h2>Contact</h2>
+        <div class="note">We can schedule a meeting or visit your site</div>
+      </div>
+
+      <div class="split">
+        <div class="card">
+          <div class="pad">
+            <h3 style="margin:0 0 10px">Get in touch</h3>
+            <p style="margin-bottom:16px">
+              We would be happy to discuss a <b>cleaning service contract</b> or long-term collaboration
+              with your facilities management department.
+            </p>
+
+            <div style="display:grid;gap:10px">
+              <a class="btn green" href="tel:+32485761331">📞 +32 485 76 13 31</a>
+              <a class="btn" href="mailto:nadhimhameed5@gmail.com">📧 nadhimhameed5@gmail.com</a>
+              <div class="pill">VAT: BE0750.489.196</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- QUOTE -->
+        <div class="card" id="quote">
+          <div class="pad">
+            <h3 style="margin:0 0 10px">Request a quotation</h3>
+            <p class="small">This form creates an email draft (no server needed).</p>
+
+            <form id="quoteForm">
+              <div>
+                <label for="name">Name / Company</label>
+                <input id="name" name="name" placeholder="Company name" required />
+              </div>
+              <div>
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="name@company.com" required />
+              </div>
+              <div>
+                <label for="phone">Phone (optional)</label>
+                <input id="phone" name="phone" placeholder="+32…" />
+              </div>
+              <div>
+                <label for="location">City / Location</label>
+                <input id="location" name="location" placeholder="Antwerp, Brussels, …" required />
+              </div>
+              <div>
+                <label for="frequency">Frequency</label>
+                <select id="frequency" name="frequency" required>
+                  <option value="">Select…</option>
+                  <option>Daily</option>
+                  <option>2–3 times per week</option>
+                  <option>Weekly</option>
+                  <option>Bi-weekly</option>
+                  <option>Monthly</option>
+                </select>
+              </div>
+              <div>
+                <label for="details">Details</label>
+                <textarea id="details" name="details" placeholder="Surface size, number of rooms, access hours, special requests…"></textarea>
+              </div>
+
+              <button class="btn primary" type="submit">Create quotation email</button>
+              <a id="quoteMail" class="btn" href="#" style="display:none">Send Email</a>
+
+              <div class="small">
+                Or call directly: <b>+32 485 76 13 31</b>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="foot">
+        <div class="logo" style="gap:12px">
+          <div class="mark">N</div>
+          <div>
+            <div style="font-weight:800">Nadhim Schoonmaker</div>
+            <div class="small">VAT: BE0750.489.196 • Belgium</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <span class="pill">📞 +32 485 76 13 31</span>
+          <span class="pill">📧 nadhimhameed5@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="small" style="margin-top:12px">
+        © <span id="year"></span> Nadhim Schoonmaker. All rights reserved.
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Footer year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    function buildMail(subject, body){
+      const to = "nadhimhameed5@gmail.com";
+      const href = "mailto:" + encodeURIComponent(to)
+        + "?subject=" + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(body);
+      return href;
+    }
+
+    // Quick form
+    const quickForm = document.getElementById("quickForm");
+    const sendMail = document.getElementById("sendMail");
+    const success = document.getElementById("success");
+
+    quickForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("q_name").value.trim();
+      const email = document.getElementById("q_email").value.trim();
+      const type = document.getElementById("q_type").value.trim();
+      const msg = document.getElementById("q_msg").value.trim();
+
+      const subject = `Cleaning Services Request - ${name}`;
+      const body =
+`Hello Nadhim Schoonmaker,
+
+My name/company: ${name}
+Email: ${email}
+Service type: ${type}
+
+Message:
+${msg}
+
+Kind regards,
+${name}`;
+
+      sendMail.href = buildMail(subject, body);
+      sendMail.style.display = "inline-flex";
+      success.style.display = "block";
+      sendMail.textContent = "Send Email";
+    });
+
+    // Quote form
+    const quoteForm = document.getElementById("quoteForm");
+    const quoteMail = document.getElementById("quoteMail");
+
+    quoteForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const location = document.getElementById("location").value.trim();
+      const frequency = document.getElementById("frequency").value.trim();
+      const details = document.getElementById("details").value.trim();
+
+      const subject = `Quotation Request - ${name} (${location})`;
+      const body =
+`Hello Nadhim Schoonmaker,
+
+I would like to request a quotation for cleaning services.
+
+Company/Name: ${name}
+Email: ${email}
+Phone: ${phone || "-"}
+Location: ${location}
+Frequency: ${frequency}
+
+Details:
+${details || "-"}
+
+Kind regards,
+${name}`;
+
+      quoteMail.href = buildMail(subject, body);
+      quoteMail.style.display = "inline-flex";
+      quoteMail.textContent = "Send Email";
+    });
+  </script>
+</body>
+</html>
