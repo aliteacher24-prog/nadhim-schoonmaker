@@ -1,108 +1,686 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nadhim Schoonmaker | Cleaning Services</title>
-
-<style>
-:root{
---bg:#0b1220;--card:#0f1a32;--text:#eef2ff;--muted:#a9b3c9;
---brand:#0b5cff;--line:rgba(255,255,255,.15);--radius:16px;--max:1100px;
-}
-*{box-sizing:border-box}
-body{
-margin:0;font-family:system-ui,Segoe UI,Roboto,Arial;
-background:linear-gradient(180deg,#070b14,var(--bg));
-color:var(--text)
-}
-.wrap{max-width:var(--max);margin:auto;padding:22px}
-header{position:sticky;top:0;background:rgba(7,11,20,.7);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-.top{display:flex;justify-content:space-between;align-items:center}
-.logo{font-weight:900;font-size:18px}
-.lang button{margin-left:6px;padding:8px 12px;border-radius:10px;border:1px solid var(--line);background:none;color:var(--text);cursor:pointer}
-.lang .active{background:var(--brand)}
-
-section{display:none}
-section.active{display:block}
-
-.card{background:rgba(255,255,255,.05);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:16px}
-h1,h2{margin-top:0}
-
-.timeline{
-display:grid;gap:16px;position:relative;padding-left:20px
-}
-.timeline::before{
-content:"";position:absolute;left:6px;top:0;bottom:0;width:3px;background:var(--brand)
-}
-.step{
-position:relative;padding-left:20px
-}
-.step::before{
-content:"";position:absolute;left:-3px;top:4px;width:14px;height:14px;border-radius:50%;
-background:var(--brand)
-}
-
-.whatsapp{
-position:fixed;right:18px;bottom:18px;
-background:#25D366;color:#06250f;
-padding:14px 16px;border-radius:999px;
-font-weight:800;text-decoration:none;
-box-shadow:0 10px 30px rgba(0,0,0,.4)
-}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Nadhim Schoonmaker | Cleaning Services in Belgium</title>
+  <meta name="description" content="Professional cleaning services in Belgium for offices, commercial buildings, and residential facilities. VAT: BE0750.489.196" />
+  <meta name="theme-color" content="#0b1220" />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a32;
+      --card2:#0c172e;
+      --text:#eef2ff;
+      --muted:#a9b3c9;
+      --line:rgba(255,255,255,.12);
+      --brand:#33b6ff;
+      --brand2:#7c4dff;
+      --ok:#2dd4bf;
+      --shadow:0 18px 60px rgba(0,0,0,.35);
+      --radius:18px;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html,body{
+      margin:0;padding:0;
+      background:
+        radial-gradient(1100px 650px at 10% -10%, rgba(51,182,255,.25), transparent 60%),
+        radial-gradient(900px 520px at 100% 10%, rgba(124,77,255,.18), transparent 55%),
+        linear-gradient(180deg, #070b14, var(--bg) 35%, #070b14);
+      color:var(--text);
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+    }
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    .wrap{max-width:var(--max);margin:0 auto;padding:22px}
+    header{
+      position:sticky;top:0;z-index:50;
+      backdrop-filter:blur(12px);
+      background:rgba(7,11,20,.55);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;gap:14px;
+      padding:14px 22px;max-width:var(--max);margin:0 auto;
+    }
+    .brandBox{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:40px;height:40px;border-radius:14px;
+      background:linear-gradient(135deg,var(--brand),rgba(124,77,255,.9));
+      box-shadow:0 12px 30px rgba(51,182,255,.18);
+      display:grid;place-items:center;font-weight:900;letter-spacing:.4px
+    }
+    .brandBox h1{font-size:16px;margin:0;line-height:1.2}
+    .brandBox p{margin:0;color:var(--muted);font-size:12px}
+    .navlinks{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:flex-end}
+    .pill{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      padding:10px 12px;border-radius:14px;
+      font-size:13px;color:var(--muted);
+      transition:.2s;cursor:pointer;
+      display:inline-flex;align-items:center;gap:8px;
+    }
+    .pill:hover{background:rgba(255,255,255,.08);color:var(--text)}
+    .pill strong{color:var(--text);font-weight:800}
+    .lang{
+      display:inline-flex;gap:6px;align-items:center;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.04);
+      padding:6px;border-radius:14px;
+    }
+    .lang button{
+      border:0;background:transparent;color:var(--muted);
+      padding:8px 10px;border-radius:12px;cursor:pointer;font-weight:900;font-size:12px;
+    }
+    .lang button.active{background:rgba(51,182,255,.16);color:var(--text);border:1px solid rgba(51,182,255,.25)}
+    .card{
+      background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      overflow:hidden;
+    }
+    .hero{
+      padding:34px 0 8px;
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media(max-width:900px){.hero{grid-template-columns:1fr}}
+    .heroMain{padding:22px}
+    .kicker{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:8px 12px;border-radius:999px;
+      background:rgba(45,212,191,.08);
+      border:1px solid rgba(45,212,191,.20);
+      font-size:13px;font-weight:900;
+    }
+    .dot{width:9px;height:9px;border-radius:99px;background:var(--ok);box-shadow:0 0 0 5px rgba(45,212,191,.12)}
+    .title{margin:14px 0 10px;font-size:40px;line-height:1.08;letter-spacing:-.5px}
+    @media(max-width:900px){.title{font-size:34px}}
+    .lead{margin:0 0 18px;color:var(--muted);font-size:15px;line-height:1.7}
+    .ctaRow{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .btn{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.06);
+      color:var(--text);
+      padding:12px 14px;border-radius:14px;
+      font-weight:900;cursor:pointer;transition:.2s;
+      display:inline-flex;align-items:center;gap:10px;
+    }
+    .btn:hover{transform:translateY(-1px);background:rgba(255,255,255,.09)}
+    .btn.primary{
+      border:1px solid rgba(51,182,255,.35);
+      background:linear-gradient(135deg, rgba(51,182,255,.22), rgba(124,77,255,.18));
+    }
+    .mini{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:16px}
+    @media(max-width:520px){.mini{grid-template-columns:1fr}}
+    .mini .box{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:12px;
+    }
+    .mini .box p{margin:0;color:var(--muted);font-size:12px}
+    .mini .box b{display:block;margin-top:4px;font-size:13px}
+    .heroSide{display:grid;grid-template-rows:1fr auto;gap:12px}
+    .heroImg{
+      height:100%;min-height:280px;
+      background:
+        linear-gradient(180deg, rgba(11,18,32,.15), rgba(11,18,32,.75)),
+        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1600&q=70') center/cover no-repeat;
+    }
+    .badgeStack{padding:14px;display:grid;gap:10px}
+    .badge{
+      background:rgba(255,255,255,.04);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:12px;
+      display:flex;gap:12px;align-items:flex-start;
+    }
+    .badge .ic{
+      width:42px;height:42px;border-radius:14px;
+      background:rgba(51,182,255,.12);
+      border:1px solid rgba(51,182,255,.18);
+      display:grid;place-items:center;
+      font-weight:900;
+    }
+    .badge h3{margin:0;font-size:14px}
+    .badge p{margin:3px 0 0;color:var(--muted);font-size:13px;line-height:1.55}
+    section{padding:18px 0}
+    .secTitle{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:0 0 10px}
+    .secTitle h2{margin:0;font-size:22px}
+    .secTitle p{margin:0;color:var(--muted);font-size:13px}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    @media(max-width:900px){.grid3{grid-template-columns:1fr}}
+    .service{
+      padding:16px;background:rgba(255,255,255,.03);
+      border:1px solid var(--line);
+      border-radius:18px;min-height:160px;
+    }
+    .service h3{margin:10px 0 8px;font-size:16px}
+    .service p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+    .tag{display:inline-flex;gap:8px;align-items:center;font-size:12px;color:var(--muted)}
+    .tag span{width:9px;height:9px;border-radius:99px;background:rgba(51,182,255,.75)}
+    .gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:12px}
+    @media(max-width:900px){.gallery{grid-template-columns:1fr}}
+    .gBig{
+      border-radius:18px;overflow:hidden;border:1px solid var(--line);
+      background:
+        linear-gradient(180deg, rgba(11,18,32,.10), rgba(11,18,32,.78)),
+        url('https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&w=1600&q=70') center/cover no-repeat;
+      min-height:320px;position:relative;
+    }
+    .gBig .cap{
+      position:absolute;left:16px;bottom:16px;right:16px;
+      background:rgba(7,11,20,.55);
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:12px;
+    }
+    .gBig .cap b{display:block}
+    .gBig .cap small{color:var(--muted)}
+    .gSmall{display:grid;grid-template-rows:repeat(2,1fr);gap:12px}
+    .gImg{
+      border-radius:18px;overflow:hidden;border:1px solid var(--line);
+      min-height:154px;
+      background-size:cover;background-position:center;
+      position:relative;
+    }
+    .gImg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg, transparent, rgba(7,11,20,.78))}
+    .gImg .cap{position:absolute;left:14px;bottom:12px;z-index:2;color:var(--text);font-weight:900;font-size:13px}
+    .timeline{display:grid;gap:12px}
+    .step{
+      padding:14px;border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+      border-radius:18px;
+      display:grid;grid-template-columns:56px 1fr;
+      gap:12px;align-items:flex-start;
+    }
+    .num{
+      width:56px;height:56px;border-radius:18px;
+      background:linear-gradient(135deg, rgba(51,182,255,.22), rgba(124,77,255,.14));
+      border:1px solid rgba(51,182,255,.25);
+      display:grid;place-items:center;font-weight:900;font-size:18px;
+    }
+    .step h3{margin:0;font-size:15px}
+    .step p{margin:6px 0 0;color:var(--muted);font-size:13px;line-height:1.6}
+    .contactGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    @media(max-width:900px){.contactGrid{grid-template-columns:1fr}}
+    .contactCard{padding:16px}
+    .field{
+      margin-top:10px;padding:12px;border-radius:16px;
+      border:1px solid var(--line);background:rgba(255,255,255,.03);
+      display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;
+    }
+    .field code{color:var(--text);font-weight:900}
+    .copyBtn{
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      padding:10px 12px;border-radius:14px;
+      cursor:pointer;color:var(--text);font-weight:900;
+    }
+    footer{padding:26px 0 40px;color:var(--muted);font-size:12px}
+    .waFloat{
+      position:fixed;right:16px;bottom:16px;z-index:60;
+      border-radius:999px;padding:12px 14px;
+      background:rgba(45,212,191,.14);
+      border:1px solid rgba(45,212,191,.25);
+      box-shadow:0 18px 60px rgba(0,0,0,.35);
+      display:flex;gap:10px;align-items:center;font-weight:900;
+    }
+    .waDot{width:10px;height:10px;border-radius:99px;background:var(--ok)}
+  </style>
 </head>
 
 <body>
 <header>
-<div class="wrap top">
-<div class="logo">Nadhim Schoonmaker</div>
-<div class="lang">
-<button onclick="setLang('nl')" id="btn-nl">NL</button>
-<button onclick="setLang('en')" id="btn-en">EN</button>
-<button onclick="setLang('fr')" id="btn-fr">FR</button>
-</div>
-</div>
+  <div class="nav">
+    <div class="brandBox">
+      <div class="logo">NS</div>
+      <div>
+        <h1>Nadhim Schoonmaker</h1>
+        <p data-i18n="nav_sub">Professional cleaning services • Belgium</p>
+      </div>
+    </div>
+
+    <div class="navlinks">
+      <a class="pill" href="#services"><strong data-i18n="nav_services">Services</strong></a>
+      <a class="pill" href="#portfolio"><strong data-i18n="nav_portfolio">Portfolio</strong></a>
+      <a class="pill" href="#process"><strong data-i18n="nav_process">Process</strong></a>
+      <a class="pill" href="#contact"><strong data-i18n="nav_contact">Contact</strong></a>
+
+      <div class="lang" aria-label="Language selector">
+        <button id="btnNL" type="button">NL</button>
+        <button id="btnFR" type="button">FR</button>
+        <button id="btnEN" type="button" class="active">EN</button>
+      </div>
+    </div>
+  </div>
 </header>
 
 <main class="wrap">
 
-<!-- NL -->
-<section id="nl">
-<h1>Professioneel schoonmaakbedrijf in België</h1>
-<p>Betrouwbare schoonmaak voor kantoren, commerciële gebouwen en residentiële faciliteiten.</p>
+  <section class="hero">
+    <div class="card heroMain">
+      <div class="kicker"><span class="dot"></span><span data-i18n="hero_kicker">Registered company • Reliable & flexible</span></div>
 
-<div class="card">
-<h2>Onze werkwijze</h2>
-<div class="timeline">
-<div class="step"><b>1. Contact</b><br>U neemt contact op via WhatsApp of e-mail.</div>
-<div class="step"><b>2. Bezoek</b><br>We bekijken het pand en uw wensen.</div>
-<div class="step"><b>3. Offerte</b><br>U ontvangt een duidelijke prijs.</div>
-<div class="step"><b>4. Uitvoering</b><br>Professionele en veilige schoonmaak.</div>
-</div>
-</div>
-</section>
+      <h2 class="title" data-i18n="hero_title">Professional Cleaning Services in Belgium</h2>
+      <p class="lead" data-i18n="hero_lead">
+        We provide high-quality cleaning for offices, commercial buildings, and residential facilities.
+        Our team works with reliability, flexibility, and strict adherence to Belgian safety & hygiene standards.
+      </p>
 
-<!-- EN -->
-<section id="en">
-<h1>Professional cleaning services in Belgium</h1>
-<p>Reliable cleaning for offices, commercial buildings and residential facilities.</p>
+      <div class="ctaRow">
+        <a class="btn primary" href="#contact" data-i18n="hero_cta1">Request a quotation</a>
+        <a class="btn" href="tel:+32485761331" data-i18n="hero_cta2">Call now</a>
+        <a class="btn" href="mailto:nadhimhameed5@gmail.com" data-i18n="hero_cta3">Email</a>
+      </div>
 
-<div class="card">
-<h2>Our process</h2>
-<div class="timeline">
-<div class="step"><b>1. Contact</b><br>You contact us via WhatsApp or email.</div>
-<div class="step"><b>2. Visit</b><br>We inspect the location and requirements.</div>
-<div class="step"><b>3. Quotation</b><br>You receive a clear price offer.</div>
-<div class="step"><b>4. Cleaning</b><br>Professional and safe cleaning service.</div>
-</div>
-</div>
-</section>
+      <div class="mini">
+        <div class="box"><p data-i18n="mini1_label">VAT / BTW</p><b>BE0750.489.196</b></div>
+        <div class="box"><p data-i18n="mini2_label">Coverage</p><b data-i18n="mini2_val">Belgium • On-site service</b></div>
+        <div class="box"><p data-i18n="mini3_label">Standards</p><b data-i18n="mini3_val">Safety & hygiene compliant</b></div>
+        <div class="box"><p data-i18n="mini4_label">Availability</p><b data-i18n="mini4_val">Flexible scheduling</b></div>
+      </div>
+    </div>
 
-<!-- FR -->
-<section id="fr">
-<h1>Entreprise de nettoyage professionnelle en Belgique</h1>
-<p>Nettoyage fiable pour bureaux, bâtiments commerciaux et résidences.</p>
+    <div class="heroSide">
+      <div class="card heroImg" aria-label="Cleaning hero image"></div>
+      <div class="card badgeStack">
+        <div class="badge">
+          <div class="ic">✓</div>
+          <div>
+            <h3 data-i18n="b1_title">Trusted & professional</h3>
+            <p data-i18n="b1_text">Clear communication, punctual teams, consistent quality control.</p>
+          </div>
+        </div>
+        <div class="badge">
+          <div class="ic">🧼</div>
+          <div>
+            <h3 data-i18n="b2_title">Deep cleaning expertise</h3>
+            <p data-i18n="b2_text">Offices, common areas, facilities, stairwells, and more.</p>
+          </div>
+        </div>
+        <div class="badge">
+          <div class="ic">🛡️</div>
+          <div>
+            <h3 data-i18n="b3_title">Safety first</h3>
+            <p data-i18n="b3_text">Work methods aligned with Belgian safety and hygiene standards.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="secTitle">
+      <div>
+        <h2 data-i18n="services_title">Services</h2>
+        <p data-i18n="services_sub">Structured routines with quality checks.</p>
+      </div>
+    </div>
+
+    <div class="grid3">
+      <div class="service">
+        <div class="tag"><span></span><span data-i18n="s1_tag">Offices</span></div>
+        <h3 data-i18n="s1_title">Office cleaning</h3>
+        <p data-i18n="s1_text">Desks, floors, meeting rooms, restrooms, kitchens, waste management.</p>
+      </div>
+      <div class="service">
+        <div class="tag"><span></span><span data-i18n="s2_tag">Commercial</span></div>
+        <h3 data-i18n="s2_title">Commercial buildings</h3>
+        <p data-i18n="s2_text">Entrances, common areas, staircases, corridors, elevators, facilities.</p>
+      </div>
+      <div class="service">
+        <div class="tag"><span></span><span data-i18n="s3_tag">Residential</span></div>
+        <h3 data-i18n="s3_title">Residential facilities</h3>
+        <p data-i18n="s3_text">Common spaces, hallways, post areas, stairs, regular maintenance.</p>
+      </div>
+
+      <div class="service">
+        <div class="tag"><span></span><span data-i18n="s4_tag">Deep clean</span></div>
+        <h3 data-i18n="s4_title">Deep cleaning</h3>
+        <p data-i18n="s4_text">Detailed cleaning for inspections, handovers, and demanding spaces.</p>
+      </div>
+      <div class="service">
+        <div class="tag"><span></span><span data-i18n="s5_tag">Hygiene</span></div>
+        <h3 data-i18n="s5_title">Sanitary cleaning</h3>
+        <p data-i18n="s5_text">Disinfection routines and hygiene-focused cleaning.</p>
+      </div>
+      <div class="service">
+        <div class="tag"><span></span><span data-i18n="s6_tag">Custom</span></div>
+        <h3 data-i18n="s6_title">Tailored contracts</h3>
+        <p data-i18n="s6_text">Flexible scheduling with clear checklists and reporting.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <div class="secTitle">
+      <div>
+        <h2 data-i18n="portfolio_title">Cleaning portfolio</h2>
+        <p data-i18n="portfolio_sub">Professional visuals to match professional work.</p>
+      </div>
+    </div>
+
+    <div class="gallery">
+      <div class="gBig card">
+        <div class="cap">
+          <b data-i18n="g_big_title">Facility-grade results</b>
+          <small data-i18n="g_big_sub">Clean, consistent, inspection-ready finishes.</small>
+        </div>
+      </div>
+
+      <div class="gSmall">
+        <div class="gImg" style="background-image:url('https://images.unsplash.com/photo-1521791055366-0d553872125f?auto=format&fit=crop&w=1400&q=70');">
+          <div class="cap" data-i18n="g1">Office & meeting rooms</div>
+        </div>
+        <div class="gImg" style="background-image:url('https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=1400&q=70');">
+          <div class="cap" data-i18n="g2">Sanitary cleaning</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="process">
+    <div class="secTitle">
+      <div>
+        <h2 data-i18n="process_title">Our process</h2>
+        <p data-i18n="process_sub">Clear steps. Predictable results.</p>
+      </div>
+    </div>
+
+    <div class="timeline">
+      <div class="step">
+        <div class="num">1</div>
+        <div>
+          <h3 data-i18n="p1_title">Contact & intake</h3>
+          <p data-i18n="p1_text">Share your needs: address, frequency, and size (m²/rooms).</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">2</div>
+        <div>
+          <h3 data-i18n="p2_title">Visit & quotation</h3>
+          <p data-i18n="p2_text">We check the site and send a clear offer with checklist & schedule.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="num">3</div>
+        <div>
+          <h3 data-i18n="p3_title">Cleaning & quality control</h3>
+          <p data-i18n="p3_text">Professional execution with consistent quality control.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="secTitle">
+      <div>
+        <h2 data-i18n="contact_title">Contact & quotation</h2>
+        <p data-i18n="contact_sub">We respond quickly.</p>
+      </div>
+    </div>
+
+    <div class="contactGrid">
+      <div class="card contactCard">
+        <h3 style="margin:0 0 6px" data-i18n="contact_box1_title">Company details</h3>
+        <p style="margin:0;color:var(--muted);line-height:1.75" data-i18n="contact_box1_text">
+          Professional cleaning services for offices, commercial buildings, and residential facilities in Belgium.
+        </p>
+
+        <div class="field">
+          <span data-i18n="phone_label">Phone</span>
+          <code id="phoneVal">+32 485 76 13 31</code>
+          <button class="copyBtn" type="button" onclick="copyText('phoneVal')" data-i18n="copy_btn">Copy</button>
+        </div>
+
+        <div class="field">
+          <span data-i18n="email_label">Email</span>
+          <code id="mailVal">nadhimhameed5@gmail.com</code>
+          <button class="copyBtn" type="button" onclick="copyText('mailVal')" data-i18n="copy_btn">Copy</button>
+        </div>
+
+        <div class="field">
+          <span data-i18n="vat_label">VAT</span>
+          <code id="vatVal">BE0750.489.196</code>
+          <button class="copyBtn" type="button" onclick="copyText('vatVal')" data-i18n="copy_btn">Copy</button>
+        </div>
+      </div>
+
+      <div class="card contactCard">
+        <h3 style="margin:0 0 10px" data-i18n="contact_box2_title">WhatsApp</h3>
+        <p style="margin:0;color:var(--muted);line-height:1.75" data-i18n="wa_text">
+          Tap below to send a WhatsApp message. We can schedule a visit and prepare a quotation.
+        </p>
+
+        <div class="ctaRow" style="margin-top:12px">
+          <a class="btn primary" id="waBtn" target="_blank" rel="noopener" href="#" data-i18n="wa_btn">WhatsApp now</a>
+          <a class="btn" target="_blank" rel="noopener"
+             href="mailto:nadhimhameed5@gmail.com?subject=Cleaning%20quotation%20request&body=Hello%20Nadhim%20Schoonmaker%2C%0A%0AI%20would%20like%20to%20request%20a%20quotation%20for%20cleaning%20services.%0A%0AAddress%3A%20%0AFrequency%3A%20%0ASurface%20or%20rooms%3A%20%0ASpecial%20needs%3A%20%0A%0AThank%20you."
+             data-i18n="mail_btn">Email template</a>
+        </div>
+
+        <div class="service" style="margin-top:12px">
+          <div class="tag"><span></span><span data-i18n="note_tag">Tip</span></div>
+          <h3 style="margin:10px 0 8px" data-i18n="note_title">What to include</h3>
+          <p style="margin:0;color:var(--muted);line-height:1.75" data-i18n="note_text">
+            Address, frequency (daily/weekly), size (m² or rooms), and special requests.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="disclaimer">
+    <div class="secTitle">
+      <div>
+        <h2 data-i18n="disc_title">Disclaimer</h2>
+        <p data-i18n="disc_sub">Important information about responsibility.</p>
+      </div>
+    </div>
+
+    <div class="card contactCard">
+      <p style="margin:0;color:var(--muted);line-height:1.85" data-i18n="disc_text">
+        This website is provided as an informational presentation for the company mentioned. The website creator is not a party to any agreement, service execution, pricing, invoicing, or legal/financial obligations. All services, contracts, and responsibilities belong solely to the company and its authorized representative.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center">
+      <div>© <span id="year"></span> Nadhim Schoonmaker • VAT: BE0750.489.196</div>
+      <div data-i18n="footer_note">Professional cleaning services • Belgium</div>
+    </div>
+  </footer>
+
+</main>
+
+<a class="waFloat" id="waFloat" target="_blank" rel="noopener" href="#">
+  <span class="waDot"></span><span data-i18n="wa_float">WhatsApp</span>
+</a>
+
+<script>
+  const PHONE_WA = "32485761331";
+
+  const dict = {
+    en: {
+      nav_sub: "Professional cleaning services • Belgium",
+      nav_services:"Services", nav_portfolio:"Portfolio", nav_process:"Process", nav_contact:"Contact",
+      hero_kicker:"Registered company • Reliable & flexible",
+      hero_title:"Professional Cleaning Services in Belgium",
+      hero_lead:"We provide high-quality cleaning for offices, commercial buildings, and residential facilities. Our team works with reliability, flexibility, and strict adherence to Belgian safety & hygiene standards.",
+      hero_cta1:"Request a quotation", hero_cta2:"Call now", hero_cta3:"Email",
+      mini1_label:"VAT / BTW", mini2_label:"Coverage", mini2_val:"Belgium • On-site service",
+      mini3_label:"Standards", mini3_val:"Safety & hygiene compliant",
+      mini4_label:"Availability", mini4_val:"Flexible scheduling",
+      b1_title:"Trusted & professional", b1_text:"Clear communication, punctual teams, consistent quality control.",
+      b2_title:"Deep cleaning expertise", b2_text:"Offices, common areas, facilities, stairwells, and more.",
+      b3_title:"Safety first", b3_text:"Work methods aligned with Belgian safety and hygiene standards.",
+      services_title:"Services", services_sub:"Structured routines with quality checks.",
+      s1_tag:"Offices", s1_title:"Office cleaning", s1_text:"Desks, floors, meeting rooms, restrooms, kitchens, waste management.",
+      s2_tag:"Commercial", s2_title:"Commercial buildings", s2_text:"Entrances, common areas, staircases, corridors, elevators, facilities.",
+      s3_tag:"Residential", s3_title:"Residential facilities", s3_text:"Common spaces, hallways, post areas, stairs, regular maintenance.",
+      s4_tag:"Deep clean", s4_title:"Deep cleaning", s4_text:"Detailed cleaning for inspections, handovers, and demanding spaces.",
+      s5_tag:"Hygiene", s5_title:"Sanitary cleaning", s5_text:"Disinfection routines and hygiene-focused cleaning.",
+      s6_tag:"Custom", s6_title:"Tailored contracts", s6_text:"Flexible scheduling with clear checklists and reporting.",
+      portfolio_title:"Cleaning portfolio", portfolio_sub:"Professional visuals to match professional work.",
+      g_big_title:"Facility-grade results", g_big_sub:"Clean, consistent, inspection-ready finishes.",
+      g1:"Office & meeting rooms", g2:"Sanitary cleaning",
+      process_title:"Our process", process_sub:"Clear steps. Predictable results.",
+      p1_title:"Contact & intake", p1_text:"Share your needs: address, frequency, and size (m²/rooms).",
+      p2_title:"Visit & quotation", p2_text:"We check the site and send a clear offer with checklist & schedule.",
+      p3_title:"Cleaning & quality control", p3_text:"Professional execution with consistent quality control.",
+      contact_title:"Contact & quotation", contact_sub:"We respond quickly.",
+      contact_box1_title:"Company details",
+      contact_box1_text:"Professional cleaning services for offices, commercial buildings, and residential facilities in Belgium.",
+      phone_label:"Phone", email_label:"Email", vat_label:"VAT", copy_btn:"Copy",
+      contact_box2_title:"WhatsApp",
+      wa_text:"Tap below to send a WhatsApp message. We can schedule a visit and prepare a quotation.",
+      wa_btn:"WhatsApp now", mail_btn:"Email template",
+      note_tag:"Tip", note_title:"What to include",
+      note_text:"Address, frequency (daily/weekly), size (m² or rooms), and special requests.",
+      disc_title:"Disclaimer",
+      disc_sub:"Important information about responsibility.",
+      disc_text:"This website is provided as an informational presentation for the company mentioned. The website creator is not a party to any agreement, service execution, pricing, invoicing, or legal/financial obligations. All services, contracts, and responsibilities belong solely to the company and its authorized representative.",
+      footer_note:"Professional cleaning services • Belgium",
+      wa_float:"WhatsApp"
+    },
+
+    nl: {
+      nav_sub: "Professionele schoonmaakdiensten • België",
+      nav_services:"Diensten", nav_portfolio:"Portfolio", nav_process:"Werkwijze", nav_contact:"Contact",
+      hero_kicker:"Geregistreerd bedrijf • Betrouwbaar & flexibel",
+      hero_title:"Professionele schoonmaakdiensten in België",
+      hero_lead:"Wij bieden kwaliteitsvolle schoonmaak voor kantoren, commerciële gebouwen en residentiële faciliteiten. Betrouwbaar team, flexibel inzetbaar en conform Belgische veiligheids- en hygiënenormen.",
+      hero_cta1:"Offerte aanvragen", hero_cta2:"Bel nu", hero_cta3:"E-mail",
+      mini1_label:"BTW", mini2_label:"Regio", mini2_val:"België • Op locatie",
+      mini3_label:"Normen", mini3_val:"Veiligheid & hygiëne conform",
+      mini4_label:"Beschikbaarheid", mini4_val:"Flexibele planning",
+      b1_title:"Betrouwbaar & professioneel", b1_text:"Duidelijke communicatie, stipte teams, constante kwaliteitscontrole.",
+      b2_title:"Expertise in dieptereiniging", b2_text:"Kantoren, gemeenschappelijke ruimtes, faciliteiten, traphallen en meer.",
+      b3_title:"Veiligheid eerst", b3_text:"Werkwijze afgestemd op Belgische veiligheids- en hygiënenormen.",
+      services_title:"Diensten", services_sub:"Structuur met kwaliteitschecks.",
+      s1_tag:"Kantoren", s1_title:"Kantoorschoonmaak", s1_text:"Bureaus, vloeren, vergaderzalen, sanitair, keuken, afvalbeheer.",
+      s2_tag:"Commercieel", s2_title:"Commerciële gebouwen", s2_text:"Ingangen, gemeenschappelijke ruimtes, trappen, gangen, liften, faciliteiten.",
+      s3_tag:"Residentieel", s3_title:"Residentiële faciliteiten", s3_text:"Gemeenschappelijke ruimtes, hallen, postzones, trappen, onderhoud.",
+      s4_tag:"Dieptereiniging", s4_title:"Dieptereiniging", s4_text:"Grondige schoonmaak voor inspecties, opleveringen en veeleisende ruimtes.",
+      s5_tag:"Hygiëne", s5_title:"Sanitair schoonmaak", s5_text:"Desinfectieroutines en hygiënegerichte schoonmaak.",
+      s6_tag:"Maatwerk", s6_title:"Contracten op maat", s6_text:"Flexibele planning met checklists en rapportage.",
+      portfolio_title:"Schoonmaak portfolio", portfolio_sub:"Professionele visuals passend bij professioneel werk.",
+      g_big_title:"Resultaten op faciliteitsniveau", g_big_sub:"Netjes, consistent en inspectieklaar.",
+      g1:"Kantoor & vergaderruimtes", g2:"Sanitair schoonmaak",
+      process_title:"Onze werkwijze", process_sub:"Duidelijke stappen. Voorspelbare resultaten.",
+      p1_title:"Contact & intake", p1_text:"Deel uw wensen: adres, frequentie en grootte (m²/kamers).",
+      p2_title:"Bezoek & offerte", p2_text:"We bekijken de locatie en sturen een duidelijke offerte met checklist & planning.",
+      p3_title:"Schoonmaak & kwaliteitscontrole", p3_text:"Professionele uitvoering met constante kwaliteitscontrole.",
+      contact_title:"Contact & offerte", contact_sub:"We reageren snel.",
+      contact_box1_title:"Bedrijfsgegevens",
+      contact_box1_text:"Professionele schoonmaak voor kantoren, commerciële gebouwen en residentiële faciliteiten in België.",
+      phone_label:"Telefoon", email_label:"E-mail", vat_label:"BTW", copy_btn:"Kopieer",
+      contact_box2_title:"WhatsApp",
+      wa_text:"Tik hieronder om een WhatsApp-bericht te sturen. We plannen een bezoek en maken een offerte.",
+      wa_btn:"WhatsApp nu", mail_btn:"E-mail sjabloon",
+      note_tag:"Tip", note_title:"Wat vermelden",
+      note_text:"Adres, frequentie (dagelijks/wekelijks), grootte (m²/kamers) en speciale wensen.",
+      disc_title:"Disclaimer",
+      disc_sub:"Belangrijke informatie over verantwoordelijkheid.",
+      disc_text:"Deze website is uitsluitend bedoeld als informatieve presentatie van het genoemde bedrijf. De maker van deze website is geen partij bij enige overeenkomst, uitvoering van diensten, prijsafspraken, facturatie of juridische/financiële verplichtingen. Alle diensten, contracten en verantwoordelijkheden behoren uitsluitend toe aan het bedrijf en zijn gemachtigde vertegenwoordiger.",
+      footer_note:"Professionele schoonmaakdiensten • België",
+      wa_float:"WhatsApp"
+    },
+
+    fr: {
+      nav_sub: "Services de nettoyage professionnels • Belgique",
+      nav_services:"Services", nav_portfolio:"Portfolio", nav_process:"Processus", nav_contact:"Contact",
+      hero_kicker:"Entreprise enregistrée • Fiable & flexible",
+      hero_title:"Services de nettoyage professionnels en Belgique",
+      hero_lead:"Nous assurons un nettoyage de qualité pour bureaux, bâtiments commerciaux et résidences. Équipe fiable, flexible et conforme aux normes belges de sécurité et d’hygiène.",
+      hero_cta1:"Demander un devis", hero_cta2:"Appeler", hero_cta3:"E-mail",
+      mini1_label:"TVA", mini2_label:"Zone", mini2_val:"Belgique • Sur site",
+      mini3_label:"Normes", mini3_val:"Sécurité & hygiène conformes",
+      mini4_label:"Disponibilité", mini4_val:"Planning flexible",
+      b1_title:"Fiable & professionnel", b1_text:"Communication claire, ponctualité, contrôle qualité constant.",
+      b2_title:"Expertise en nettoyage en profondeur", b2_text:"Bureaux, espaces communs, installations, cages d’escalier, etc.",
+      b3_title:"Sécurité avant tout", b3_text:"Méthodes alignées sur les normes belges de sécurité et d’hygiène.",
+      services_title:"Services", services_sub:"Structure avec contrôles qualité.",
+      s1_tag:"Bureaux", s1_title:"Nettoyage de bureaux", s1_text:"Bureaux, sols, salles de réunion, sanitaires, cuisines, gestion des déchets.",
+      s2_tag:"Commercial", s2_title:"Bâtiments commerciaux", s2_text:"Entrées, espaces communs, escaliers, couloirs, ascenseurs, installations.",
+      s3_tag:"Résidentiel", s3_title:"Résidences", s3_text:"Espaces communs, halls, zones courrier, escaliers, entretien régulier.",
+      s4_tag:"Nettoyage profond", s4_title:"Nettoyage en profondeur", s4_text:"Nettoyage détaillé pour inspections, remises des lieux et espaces exigeants.",
+      s5_tag:"Hygiène", s5_title:"Nettoyage sanitaire", s5_text:"Désinfection et routines axées sur l’hygiène.",
+      s6_tag:"Sur mesure", s6_title:"Contrats sur mesure", s6_text:"Horaires flexibles avec checklists et reporting clairs.",
+      portfolio_title:"Portfolio", portfolio_sub:"Des visuels professionnels pour un service professionnel.",
+      g_big_title:"Résultats haut niveau", g_big_sub:"Propre, constant et prêt pour inspection.",
+      g1:"Bureaux & salles", g2:"Nettoyage sanitaire",
+      process_title:"Notre processus", process_sub:"Étapes claires. Résultats prévisibles.",
+      p1_title:"Contact & prise d’infos", p1_text:"Indiquez vos besoins : adresse, fréquence et taille (m²/pièces).",
+      p2_title:"Visite & devis", p2_text:"Nous vérifions le site et envoyons un devis clair avec checklist & planning.",
+      p3_title:"Nettoyage & contrôle qualité", p3_text:"Exécution professionnelle avec contrôle qualité constant.",
+      contact_title:"Contact & devis", contact_sub:"Réponse rapide.",
+      contact_box1_title:"Coordonnées",
+      contact_box1_text:"Nettoyage professionnel pour bureaux, bâtiments commerciaux et résidences en Belgique.",
+      phone_label:"Téléphone", email_label:"E-mail", vat_label:"TVA", copy_btn:"Copier",
+      contact_box2_title:"WhatsApp",
+      wa_text:"Appuyez ci-dessous pour envoyer un message WhatsApp. Nous planifions une visite et préparons un devis.",
+      wa_btn:"WhatsApp", mail_btn:"Modèle e-mail",
+      note_tag:"Astuce", note_title:"À inclure",
+      note_text:"Adresse, fréquence, taille (m²/pièces) et demandes spécifiques.",
+      disc_title:"Avertissement",
+      disc_sub:"Informations importantes concernant la responsabilité.",
+      disc_text:"Ce site web est fourni uniquement à titre de présentation informative de l’entreprise mentionnée. Le créateur du site n’est partie à aucun accord, exécution de service, tarification, facturation, ni obligation juridique/financière. Tous les services, contrats et responsabilités relèvent exclusivement de l’entreprise et de son représentant autorisé.",
+      footer_note:"Services de nettoyage professionnels • Belgique",
+      wa_float:"WhatsApp"
+    }
+  };
+
+  function setLang(lang){
+    document.documentElement.lang = lang;
+
+    document.querySelectorAll("[data-i18n]").forEach(el=>{
+      const key = el.getAttribute("data-i18n");
+      if(dict[lang] && dict[lang][key]) el.textContent = dict[lang][key];
+    });
+
+    const msg = {
+      en: "Hello Nadhim Schoonmaker, I would like to request a cleaning quotation. Please contact me.",
+      nl: "Hallo Nadhim Schoonmaker, ik wil graag een offerte aanvragen voor schoonmaakdiensten. Gelieve mij te contacteren.",
+      fr: "Bonjour Nadhim Schoonmaker, je souhaite demander un devis pour des services de nettoyage. Merci de me contacter."
+    }[lang] || "Hello, I would like a cleaning quotation.";
+
+    const waUrl = `https://wa.me/${PHONE_WA}?text=${encodeURIComponent(msg)}`;
+    document.getElementById("waBtn").href = waUrl;
+    document.getElementById("waFloat").href = waUrl;
+
+    // active buttons
+    ["NL","FR","EN"].forEach(code=>{
+      document.getElementById("btn"+code).classList.remove("active");
+    });
+    document.getElementById("btn"+lang.toUpperCase()).classList.add("active");
+
+    localStorage.setItem("lang", lang);
+  }
+
+  function copyText(id){
+    const t = document.getElementById(id).textContent.trim();
+    navigator.clipboard.writeText(t);
+  }
+
+  document.getElementById("btnNL").addEventListener("click", ()=>setLang("nl"));
+  document.getElementById("btnFR").addEventListener("click", ()=>setLang("fr"));
+  document.getElementById("btnEN").addEventListener("click", ()=>setLang("en"));
+
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  setLang(localStorage.getItem("lang") || "en");
+</script>
+</body>
+  </html><p>Nettoyage fiable pour bureaux, bâtiments commerciaux et résidences.</p>
 
 <div class="card">
 <h2>Notre méthode</h2>
